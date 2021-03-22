@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <h1>Home</h1>
+    <div v-if="error">{{ error }}</div>
     <PostList :posts="posts" />
   </div>
 </template>
@@ -14,12 +15,24 @@ export default {
     PostList
   },
   setup() {
-    const posts = ref([
-      { id: 1, title: 'Artikel Pertama di Februari', body: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur labore expedita mollitia perspiciatis!'},
-      { id: 2, title: 'Artikel Kedua di Februari', body: 'Id similique iure, repellendus earum debitis enim dolor quibusdam quod modi nisi harum aspernatur dolorem voluptate delectus exercitationem reprehenderit voluptatibus qui quisquam.'}
-    ])
+    const posts = ref([])
+    const error = ref(null)
 
-    return { posts }
+    const load = async () => {
+      try {
+        let data = await fetch('http://localhost:3000/posts')
+        if (! data.ok) {
+          throw Error('Tidak ada data')
+        }
+        posts.value = await data.json()
+      } catch (err) {
+        error.value = err.message
+      }
+    }
+
+    load()
+
+    return { posts, error }
   }
 }
 </script>
