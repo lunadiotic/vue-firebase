@@ -6,11 +6,15 @@ const getPost = (id) => {
 
     const load = async () => {
         try {
-        let data = await fetch('http://localhost:3000/posts/' + id)
-        if (! data.ok) {
-            throw Error('Tidak ada data')
-        }
-        post.value = await data.json()
+            await new Promise(resolve => {
+                setTimeout(resolve, 2000)
+            })
+
+            let data = await fetch('http://localhost:3000/posts/' + id)
+            if (! data.ok) {
+                throw Error('Tidak ada data')
+            }
+            post.value = await data.json()
         } catch (err) {
             error.value = err.message
         }
