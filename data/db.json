@@ -1,24 +1,41 @@
 {
-    "posts": [
-        {
-            "id": 1,
-            "title": "Artikel Pertama",
-            "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur labore expedita mollitia perspiciatis!",
-            "tags": [
-                "web",
-                "vue",
-                "node"
-            ]
-        },
-        {
-            "id": 2,
-            "title": "Artikel Kedua",
-            "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur labore expedita mollitia perspiciatis!",
-            "tags": [
-                "js",
-                "html",
-                "css"
-            ]
-        }
-    ]
+  "posts": [
+    {
+      "id": 1,
+      "title": "Artikel Pertama",
+      "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur labore expedita mollitia perspiciatis!",
+      "tags": [
+        "web",
+        "vue",
+        "node"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Artikel Kedua",
+      "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur labore expedita mollitia perspiciatis!",
+      "tags": [
+        "js",
+        "html",
+        "css"
+      ]
+    },
+    {
+      "title": "Artikel ke tiga",
+      "body": "Isi dari artikel tiga",
+      "tags": [
+        "vue",
+        "firebase"
+      ],
+      "id": 3
+    },
+    {
+      "title": "Artikel ke empat",
+      "body": "isi artikel ke empat",
+      "tags": [
+        "vue"
+      ],
+      "id": 4
+    }
+  ]
 }
