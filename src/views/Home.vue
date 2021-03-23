@@ -1,18 +1,38 @@
 <template>
-  <div class="home">
-    <h1>Home</h1>
-    <div v-if="error">{{ error }}</div>
-    <div v-if="posts.length">
-      <PostList :posts="posts" />
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('img/home-bg.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>Clean Blog</h1>
+            <span class="subheading">A Blog Theme by Start Bootstrap</span>
+          </div>
+        </div>
+      </div>
     </div>
-    <div v-else>
-      <Loading />
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div v-if="error">{{ error }}</div>
+        <div v-if="posts.length">
+          <PostList :posts="posts" />
+        </div>
+        <div v-else>
+          <Loading />
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import PostList from '../components/PostList'
+import PostList from '../components/posts/PostList'
 import Loading from '@/components/Loading'
 import getPosts from '../composable/getPosts'
 
