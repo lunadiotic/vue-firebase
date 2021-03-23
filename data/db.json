@@ -36,6 +36,28 @@
         "vue"
       ],
       "id": 4
+    },
+    {
+      "title": "Create post from clean blog",
+      "body": "Ini adalah isi post dari clean blog yang sudah diintegrasikan di dalam project vue cli",
+      "tags": [],
+      "id": 5
+    },
+    {
+      "title": "Data baru",
+      "body": "Input body data baru",
+      "tags": [],
+      "id": 6
+    },
+    {
+      "title": "Data post baru",
+      "body": "data post baru lagi",
+      "tags": [
+        "vue",
+        "firebase",
+        "bootstrap"
+      ],
+      "id": 7
     }
   ]
 }
